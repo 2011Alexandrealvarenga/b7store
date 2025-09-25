@@ -3,8 +3,21 @@ import Image from "next/image"
 import imglogo from '../../../public/assets/ui/logo-black.png'
 import { HeaderIcon } from "./header-icon"
 import Link from "next/link"
+import { useState } from "react"
+
+type MenuItem ={
+  label: string;
+  href: string;
+}
 
 export function Header(){
+  const menu = [
+    {label: 'Camisa', href:'/categories/camisa'},
+    {label: 'Kits', href:'/categories/kits'}
+  ];
+
+  // event to open menu mobile
+  const [menuOpened, setMenuOpened] = useState(false);
   return(
     <header className="bg-white border-b border-gray-100">
       <div className="bg-black text-white text-center p-4">
@@ -30,13 +43,41 @@ export function Header(){
             <Link href={'/cart'}>
               <HeaderIcon src="/assets/ui/shopping-bag-4-line.png" alt="Carrinho"/>
             </Link>
-            <div className="md:hidden">
-              <HeaderIcon src="/assets/ui/menu-line.png" alt="menu"/>
+            {/* click event to open menu mobile */}
+            <div className="md:hidden" onClick={() => setMenuOpened(!menuOpened)}>
+              <HeaderIcon 
+                src="/assets/ui/menu-line.png" 
+                alt="menu"
+                selected={menuOpened}
+                srcSelected='/assets/ui/menu-line-white.png'
+              />
+
+
             </div>
           </div>
         </div>
       </div>
-
+      {
+        menuOpened &&
+        <div className="md:hidden">
+          {menu.map(item=>(
+            <Link key={item.label} href={item.href}>
+              <div className="p-6 border-b border-gray-200 flex justify-between items-center">
+                <div className="font-medium text-lg text-gray-500">{item.label}</div>
+                  <Image 
+                  src={'/assets/ui/arrow-up-right.png'}
+                  alt="ir para categoria"
+                  width={24}
+                  height={24}
+                  />
+              </div>
+            </Link>
+          ))}
+        </div>
+      }
+      <div className="md:hidden p-6">
+        busca mobile
+      </div>
     </header>
   )
 }
