@@ -4,7 +4,7 @@ type Props ={
   src: string;
   alt: string;
   selected?: boolean;
-  srcSelected?: boolean;
+  srcSelected?: string;
 }
 export const HeaderIcon = ({src, alt, selected, srcSelected}:Props) =>{
   return(
