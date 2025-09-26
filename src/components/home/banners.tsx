@@ -10,7 +10,7 @@ type Props = {
 
 // timer to change banner
 let bannerTimer:NodeJS.Timeout;
-let bannerTimerSecond = 10000;
+let bannerTimerSecond = 100000;
 
 export const Banners = ({list}: Props) =>{
   
