@@ -58,7 +58,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-
       <Suspense fallback={<ProductListSkeleton/>}>
         <MostViewedProducts/>
       </Suspense>

@@ -13,6 +13,5 @@ export default function SiteLayout({
       </main>
       <Footer/>
    </div>
-
   );
 }
