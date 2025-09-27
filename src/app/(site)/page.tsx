@@ -8,7 +8,7 @@ import { Suspense } from "react";
 
 export default function Page() {
   return (
-    <div className="pb-96">
+    <div>
       <Banners list={data.banners}/>
       {/* above banners 3 itens */}
       <div className="flex flex-col md:flex-row gap-4 md:gap-8 mt-6 md:mt-12">
