@@ -14,7 +14,7 @@ export const data ={
     {id: 4,label:'Camisa React', price: 10.90, image:'/assets/products/camiseta-react-azul.png', liked: false},
 
   ],
-    product: [
+  product: 
     {
       id: 1,
       label:'Camisa PHP', 
@@ -26,5 +26,6 @@ export const data ={
       liked: false,
       description: 'Descrição do produto',
     }
-  ]
+  
+
 }

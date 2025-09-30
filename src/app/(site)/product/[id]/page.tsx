@@ -14,8 +14,7 @@ export default async function Page ({params}:Props){
   return(
     <div>
       <div className="text-gray-500">
-        <Link href={"/"}>Home </Link>&gt; <Link href={"/"}>Camisas </Link>&gt; Nome do produto
-      </div>
+        <Link href={"/"}>Home </Link>&gt; <Link href={"/"}>temporario </Link>&gt; {data.product.label}</div>
       <div className="flex flex-col md:flex-row gap-6 md:gap-32">
         <ImageSlider images={data.product.images}/>
         <ProductDetails product={data.product}/>

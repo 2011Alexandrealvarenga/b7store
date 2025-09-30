@@ -6,10 +6,10 @@ export type Product ={
   liked: boolean;
 
 }
-export type ProductComplete ={
+export type ProductComplete = {
   id: number;
   label: string;
-  image: string[];
+  images: string[];
   price: number;
   liked: boolean;
   description: string;
