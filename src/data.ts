@@ -6,6 +6,7 @@ export const data ={
     {img:'/assets/banners/banner-4.png', link:''},
   ],
 
+  // product list
   products: [
     {id: 1,label:'Camisa PHP', price: 40.90, image:'/assets/products/camiseta-php.png', liked: false},
     {id: 2,label:'Camisa Laravel', price: 30.90, image:'/assets/products/camiseta-laravel-branca.png', liked: false},
