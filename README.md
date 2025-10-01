@@ -10,3 +10,5 @@ https://b7store-wine.vercel.app/
 #zustand
 
 npm i axios zod zustand
+
+<img src="project-picture.PNG" alt="" />
