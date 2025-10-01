@@ -1,6 +1,5 @@
 import { Header } from "components/layout/header";
 import { Footer } from "./footer";
-import { StoreHydration } from "providers/store-hydration";
 
 export default function SiteLayout({
   children,
@@ -9,7 +8,6 @@ export default function SiteLayout({
 }>) {
   return (
    <div>
-      <StoreHydration />
       <Header/>
       <main className="w-full max-w-6xl mx-auto p-6">
         
